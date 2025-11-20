@@ -1,0 +1,515 @@
+/* Specialty Module Styles */
+.specialty-module {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
+  display: flex;
+  flex-direction: column;
+}
+
+.specialty-header {
+  background-color: #8e44ad;
+  color: white;
+  padding: 30px 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.specialty-header h1 {
+  margin: 0 0 10px 0;
+  font-size: 32px;
+}
+
+.specialty-header p {
+  margin: 0;
+  opacity: 0.9;
+}
+
+.specialty-container {
+  display: flex;
+  flex: 1;
+  max-width: 1600px;
+  width: 100%;
+  margin: 0 auto;
+  gap: 0;
+}
+
+/* Sidebar */
+.specialty-sidebar {
+  width: 280px;
+  background-color: white;
+  box-shadow: 2px 0 8px rgba(0, 0, 0, 0.1);
+  padding: 20px 0;
+  overflow-y: auto;
+}
+
+.specialty-sidebar h3 {
+  padding: 0 20px;
+  margin: 0 0 15px 0;
+  color: #2c3e50;
+  font-size: 18px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.specialty-btn {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 15px 20px;
+  background-color: white;
+  border: none;
+  border-left: 4px solid transparent;
+  cursor: pointer;
+  transition: all 0.3s;
+  text-align: left;
+}
+
+.specialty-btn:hover {
+  background-color: #f8f9fa;
+}
+
+.specialty-btn.active {
+  background-color: #f0f0f0;
+  font-weight: 600;
+}
+
+.specialty-icon {
+  font-size: 24px;
+}
+
+.specialty-name {
+  flex: 1;
+  color: #2c3e50;
+  font-size: 15px;
+}
+
+.specialty-count {
+  background-color: #3498db;
+  color: white;
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+/* Main Content */
+.specialty-main {
+  flex: 1;
+  padding: 30px;
+  overflow-y: auto;
+}
+
+.specialty-title {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 30px;
+  padding: 20px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border-left: 5px solid;
+}
+
+.title-icon {
+  font-size: 36px;
+}
+
+.specialty-title h2 {
+  margin: 0;
+  color: #2c3e50;
+  font-size: 28px;
+}
+
+/* Worklist Section */
+.worklist-section {
+  background-color: white;
+  border-radius: 8px;
+  padding: 25px;
+  margin-bottom: 30px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.section-header h3 {
+  margin: 0;
+  color: #2c3e50;
+  font-size: 22px;
+}
+
+.worklist-summary {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.summary-item {
+  font-size: 13px;
+  color: #555;
+  padding: 8px 15px;
+  background-color: #f8f9fa;
+  border-radius: 20px;
+  font-weight: 600;
+}
+
+/* Worklist Grid */
+.worklist-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 20px;
+}
+
+.worklist-card {
+  background-color: #fafafa;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.worklist-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.card-header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.procedure-id {
+  font-weight: 700;
+  color: #2c3e50;
+  font-size: 14px;
+}
+
+.priority-tag,
+.status-tag {
+  padding: 4px 12px;
+  border-radius: 12px;
+  font-size: 10px;
+  font-weight: 700;
+  color: white;
+  text-transform: uppercase;
+}
+
+.card-content h4 {
+  margin: 0 0 15px 0;
+  color: #2c3e50;
+  font-size: 18px;
+}
+
+.procedure-info {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+.info-label {
+  font-weight: 600;
+  color: #555;
+}
+
+.info-value {
+  color: #2c3e50;
+}
+
+.card-actions {
+  margin-top: 15px;
+  padding-top: 15px;
+  border-top: 1px solid #e0e0e0;
+  display: flex;
+  gap: 10px;
+}
+
+.btn-start,
+.btn-complete,
+.btn-view {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.btn-start {
+  background-color: #3498db;
+  color: white;
+}
+
+.btn-start:hover {
+  background-color: #2980b9;
+}
+
+.btn-complete {
+  background-color: #27ae60;
+  color: white;
+}
+
+.btn-complete:hover {
+  background-color: #229954;
+}
+
+.btn-view {
+  background-color: #95a5a6;
+  color: white;
+}
+
+.btn-view:hover {
+  background-color: #7f8c8d;
+}
+
+/* Schedule Section */
+.schedule-section {
+  background-color: white;
+  border-radius: 8px;
+  padding: 25px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.schedule-section h3 {
+  margin: 0 0 20px 0;
+  color: #2c3e50;
+  font-size: 22px;
+}
+
+.schedule-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.btn-schedule {
+  padding: 12px 30px;
+  background-color: #8e44ad;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  align-self: flex-end;
+}
+
+.btn-schedule:hover {
+  background-color: #732d91;
+}
+
+/* Modal */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  padding: 20px;
+}
+
+.modal-content {
+  background-color: white;
+  border-radius: 12px;
+  max-width: 700px;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 25px;
+  border-bottom: 2px solid #e0e0e0;
+}
+
+.modal-header h3 {
+  margin: 0;
+  color: #2c3e50;
+  font-size: 22px;
+}
+
+.modal-close {
+  background: none;
+  border: none;
+  font-size: 32px;
+  color: #7f8c8d;
+  cursor: pointer;
+  padding: 0;
+  width: 32px;
+  height: 32px;
+  line-height: 1;
+}
+
+.modal-close:hover {
+  color: #2c3e50;
+}
+
+.modal-body {
+  padding: 25px;
+}
+
+.procedure-details {
+  background-color: #f8f9fa;
+  padding: 15px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+.procedure-details p {
+  margin: 8px 0;
+  color: #2c3e50;
+  font-size: 14px;
+}
+
+.results-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.modal-footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: 15px;
+  padding: 20px 25px;
+  border-top: 2px solid #e0e0e0;
+}
+
+/* Form Styles */
+.form-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  color: #34495e;
+  font-weight: 600;
+  margin-bottom: 8px;
+  font-size: 14px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  padding: 10px 12px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 14px;
+  font-family: inherit;
+  transition: border-color 0.3s;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #8e44ad;
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+.btn-primary,
+.btn-secondary {
+  padding: 12px 30px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.btn-primary {
+  background-color: #8e44ad;
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: #732d91;
+}
+
+.btn-secondary {
+  background-color: #95a5a6;
+  color: white;
+}
+
+.btn-secondary:hover {
+  background-color: #7f8c8d;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .specialty-container {
+    flex-direction: column;
+  }
+
+  .specialty-sidebar {
+    width: 100%;
+  }
+
+  .specialty-btn {
+    padding: 12px 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .specialty-header h1 {
+    font-size: 24px;
+  }
+
+  .specialty-main {
+    padding: 20px 15px;
+  }
+
+  .specialty-title {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .worklist-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .modal-content {
+    max-height: 95vh;
+  }
+
+  .card-actions {
+    flex-direction: column;
+  }
+}

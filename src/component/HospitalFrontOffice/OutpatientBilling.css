@@ -1,0 +1,284 @@
+/* Outpatient Billing Styles */
+.outpatient-billing-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.billing-header {
+  margin-bottom: 30px;
+  padding-bottom: 15px;
+  border-bottom: 2px solid #2c5f7e;
+}
+
+.billing-header h2 {
+  color: #2c5f7e;
+  margin: 0 0 10px 0;
+  font-size: 28px;
+}
+
+.billing-header p {
+  color: #666;
+  margin: 0;
+  font-size: 14px;
+}
+
+.billing-form {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+/* Quick Services */
+.quick-services {
+  margin-bottom: 20px;
+}
+
+.quick-services label {
+  display: block;
+  color: #333;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.service-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.quick-service-btn {
+  padding: 8px 16px;
+  background-color: #e3f2fd;
+  color: #1976d2;
+  border: 1px solid #1976d2;
+  border-radius: 20px;
+  font-size: 13px;
+  cursor: pointer;
+  transition: all 0.3s;
+  white-space: nowrap;
+}
+
+.quick-service-btn:hover {
+  background-color: #1976d2;
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 2px 5px rgba(25, 118, 210, 0.3);
+}
+
+/* Add Service Form */
+.add-service-form {
+  background-color: #f0f8ff;
+  padding: 15px;
+  border-radius: 8px;
+  border: 1px solid #b3d9ff;
+  margin-bottom: 20px;
+}
+
+.add-service-form .form-row {
+  align-items: flex-end;
+}
+
+.btn-add-service {
+  padding: 10px 20px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-top: 23px;
+}
+
+.btn-add-service:hover {
+  background-color: #218838;
+}
+
+/* Services List Table */
+.services-list {
+  margin-top: 20px;
+  overflow-x: auto;
+}
+
+.services-list table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: white;
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.services-list thead {
+  background-color: #2c5f7e;
+  color: white;
+}
+
+.services-list th,
+.services-list td {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.services-list th {
+  font-weight: 600;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+
+.services-list td {
+  font-size: 14px;
+}
+
+.services-list tbody tr:hover {
+  background-color: #f5f5f5;
+}
+
+.services-list tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.btn-remove {
+  padding: 6px 12px;
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 12px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.btn-remove:hover {
+  background-color: #c82333;
+}
+
+/* Billing Summary */
+.billing-summary {
+  background-color: #f0fff4;
+  border: 2px solid #28a745;
+}
+
+.billing-summary h3 {
+  color: #28a745;
+  border-bottom-color: #28a745;
+}
+
+.summary-content {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.summary-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 15px;
+  background-color: white;
+  border-radius: 5px;
+}
+
+.summary-row.total {
+  background-color: #28a745;
+  color: white;
+  font-size: 18px;
+  font-weight: 700;
+  padding: 15px;
+}
+
+.summary-row .amount {
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.summary-row .amount.negative {
+  color: #dc3545;
+}
+
+.summary-row.total .amount {
+  color: white;
+  font-size: 20px;
+}
+
+.discount-input {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.discount-input label {
+  margin: 0;
+  font-weight: 600;
+}
+
+.discount-input input {
+  width: 80px;
+  padding: 5px 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .outpatient-billing-container {
+    padding: 15px;
+  }
+
+  .billing-header h2 {
+    font-size: 24px;
+  }
+
+  .service-buttons {
+    flex-direction: column;
+  }
+
+  .quick-service-btn {
+    width: 100%;
+  }
+
+  .services-list {
+    font-size: 12px;
+  }
+
+  .services-list th,
+  .services-list td {
+    padding: 8px;
+  }
+
+  .summary-row {
+    font-size: 14px;
+  }
+
+  .summary-row.total {
+    font-size: 16px;
+  }
+}
+
+@media print {
+  .quick-services,
+  .add-service-form,
+  .form-actions,
+  .btn-remove {
+    display: none;
+  }
+
+  .outpatient-billing-container {
+    box-shadow: none;
+  }
+
+  .services-list table {
+    page-break-inside: auto;
+  }
+
+  .services-list tr {
+    page-break-inside: avoid;
+    page-break-after: auto;
+  }
+}

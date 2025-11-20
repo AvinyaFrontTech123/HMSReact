@@ -1,0 +1,309 @@
+/* Laboratory Module Styles */
+.laboratory-module {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  display: flex;
+  flex-direction: column;
+}
+
+.lab-header {
+  background-color: #2c3e50;
+  color: white;
+  padding: 30px 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.lab-header h1 {
+  margin: 0 0 10px 0;
+  font-size: 32px;
+}
+
+.lab-header p {
+  margin: 0;
+  opacity: 0.9;
+}
+
+.lab-tabs {
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.lab-tab {
+  flex: 1;
+  max-width: 250px;
+  padding: 16px 24px;
+  background-color: white;
+  border: none;
+  border-bottom: 3px solid transparent;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 600;
+  color: #666;
+  transition: all 0.3s;
+}
+
+.lab-tab:hover {
+  background-color: #f5f5f5;
+  color: #2c3e50;
+}
+
+.lab-tab.active {
+  color: #2c3e50;
+  border-bottom-color: #3498db;
+  background-color: #e8f4f8;
+}
+
+.lab-content {
+  flex: 1;
+  padding: 30px 20px;
+  max-width: 1400px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* Worklist Styles */
+.worklist-container {
+  background-color: white;
+  border-radius: 8px;
+  padding: 25px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.worklist-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.worklist-header h3 {
+  margin: 0;
+  color: #2c3e50;
+  font-size: 24px;
+}
+
+.worklist-filters {
+  display: flex;
+  gap: 10px;
+}
+
+.filter-select {
+  padding: 8px 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.worklist-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+.stat-item {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 20px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.stat-label {
+  font-size: 13px;
+  opacity: 0.9;
+  margin-bottom: 8px;
+}
+
+.stat-value {
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.worklist-table {
+  overflow-x: auto;
+}
+
+.worklist-table table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: white;
+}
+
+.worklist-table th,
+.worklist-table td {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.worklist-table th {
+  background-color: #34495e;
+  color: white;
+  font-weight: 600;
+  font-size: 13px;
+  text-transform: uppercase;
+}
+
+.worklist-table tbody tr:hover {
+  background-color: #f8f9fa;
+}
+
+.priority-badge,
+.status-badge {
+  padding: 4px 12px;
+  border-radius: 12px;
+  font-size: 11px;
+  font-weight: 700;
+  color: white;
+  text-transform: uppercase;
+  display: inline-block;
+}
+
+.action-buttons {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.btn-action-small {
+  padding: 6px 12px;
+  border: none;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.btn-collect {
+  background-color: #3498db;
+  color: white;
+}
+
+.btn-collect:hover {
+  background-color: #2980b9;
+}
+
+.btn-process {
+  background-color: #f39c12;
+  color: white;
+}
+
+.btn-process:hover {
+  background-color: #e67e22;
+}
+
+.btn-view {
+  background-color: #27ae60;
+  color: white;
+}
+
+.btn-view:hover {
+  background-color: #229954;
+}
+
+/* Test Request Form */
+.test-request-container {
+  background-color: white;
+  border-radius: 8px;
+  padding: 25px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.test-request-container h3 {
+  color: #2c3e50;
+  margin: 0 0 20px 0;
+  font-size: 24px;
+}
+
+.test-request-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Test Results */
+.test-results-container {
+  background-color: white;
+  border-radius: 8px;
+  padding: 25px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.test-info-card {
+  background-color: #ecf0f1;
+  border-left: 4px solid #3498db;
+  padding: 20px;
+  margin-bottom: 25px;
+  border-radius: 4px;
+}
+
+.info-row {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.info-row:last-child {
+  margin-bottom: 0;
+}
+
+.info-label {
+  font-weight: 600;
+  color: #34495e;
+  min-width: 100px;
+}
+
+.info-value {
+  color: #2c3e50;
+}
+
+.results-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .lab-header h1 {
+    font-size: 24px;
+  }
+
+  .lab-tabs {
+    flex-wrap: wrap;
+  }
+
+  .lab-tab {
+    flex: 1 1 auto;
+    min-width: 120px;
+    padding: 12px 16px;
+    font-size: 13px;
+  }
+
+  .worklist-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .worklist-table {
+    font-size: 12px;
+  }
+
+  .worklist-table th,
+  .worklist-table td {
+    padding: 8px;
+  }
+}
