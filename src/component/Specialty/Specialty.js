@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './Specialty.css';
+import Navbar from '../Navbar/Navbar';
 
 const Specialty = () => {
   const [selectedSpecialty, setSelectedSpecialty] = useState('cardiology');
@@ -170,6 +171,7 @@ const Specialty = () => {
 
   return (
     <div className="specialty-module">
+      <Navbar/>
       <header className="specialty-header">
         <h1>🏥 Specialty Departments</h1>
         <p>Department-specific workflows and procedures</p>

@@ -1,0 +1,127 @@
+/* ---------- PAGE BACKGROUND ---------- */
+.rm-page {
+  min-height: 100vh;
+  background: #aecae0;
+}
+
+/* ---------- WRAPPER (centers card) ---------- */
+.rm-wrapper {
+  display: flex;
+  justify-content: center;
+  padding: 40px 20px;
+margin-top: 90px; /* space below navbar */
+}
+
+/* ---------- CARD ---------- */
+.rm-card {
+  background: #ffffff;
+  width: 450px;
+  padding: 30px;
+  border-radius: 14px;
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.10);
+  animation: fadeIn 0.4s ease;
+}
+
+/* ---------- HEADER ---------- */
+.rm-header {
+  text-align: center;
+  font-size: 26px;
+  font-weight: 800;
+  color: #2c3e50;
+  margin-bottom: 20px;
+}
+
+/* ---------- FORM ---------- */
+.rm-form label {
+  font-weight: 600;
+  font-size: 15px;
+  display: block;
+  margin-top: 12px;
+  color: #333;
+}
+
+.rm-form input,
+.rm-form textarea {
+  width: 100%;
+  padding: 12px;
+  margin-top: 6px;
+  border-radius: 8px;
+  border: 1px solid #b6b6b6;
+  background: #f8fafc;
+  font-size: 15px;
+  transition: border-color 0.3s, box-shadow 0.3s ease;
+}
+
+.rm-form input:focus,
+.rm-form textarea:focus {
+  outline: none;
+  border-color: #2563eb;
+  background: white;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.2);
+}
+
+.rm-form textarea {
+  height: 130px;
+  resize: none;
+}
+
+/* ---------- ERROR TEXT ---------- */
+.rm-error-text {
+  color: red;
+  font-size: 13px;
+  margin-top: 4px;
+}
+
+/* ---------- BUTTONS ---------- */
+.rm-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 22px;
+}
+
+.rm-save-btn {
+  padding: 12px 25px;
+  background: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.rm-save-btn:hover {
+  background: #1d4ed8;
+  transform: translateY(-2px);
+}
+
+.rm-cancel-btn {
+  padding: 12px 25px;
+  background: #e74c3c;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.rm-cancel-btn:hover {
+  background: #c0392b;
+  transform: translateY(-2px);
+}
+.required {
+  color: red;
+}
+
+/* ---------- ANIMATION ---------- */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

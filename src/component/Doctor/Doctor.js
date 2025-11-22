@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './Doctor.css';
+import Navbar from '../Navbar/Navbar';
 
 const Doctor = () => {
   const [activeTab, setActiveTab] = useState('worklist');
@@ -394,6 +395,7 @@ const Doctor = () => {
 
   return (
     <div className="doctor-module">
+      <Navbar/>
       <header className="doctor-header">
         <h1>👨‍⚕️ Doctor's Module</h1>
         <p>Patient consultation and prescription management</p>

@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import PatientRegistration from './PatientRegistration';
 import OutpatientBilling from './OutpatientBilling';
 import './HospitalFrontOffice.css';
+import Navbar from '../Navbar/Navbar';
 
 const HospitalFrontOffice = () => {
   const [activeTab, setActiveTab] = useState('registration');
@@ -133,6 +134,7 @@ const HospitalFrontOffice = () => {
 
   return (
     <div className="hospital-front-office">
+      <Navbar/>
       <header className="front-office-header">
         <div className="header-content">
           <h1>🏥 Hospital Front Office</h1>

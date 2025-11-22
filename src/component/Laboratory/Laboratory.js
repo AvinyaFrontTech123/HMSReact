@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './Laboratory.css';
+import Navbar from '../Navbar/Navbar';
 
 const Laboratory = () => {
   const [activeTab, setActiveTab] = useState('worklist');
@@ -404,6 +405,7 @@ const Laboratory = () => {
 
   return (
     <div className="laboratory-module">
+      <Navbar/>
       <header className="lab-header">
         <h1>🔬 Laboratory Management System</h1>
         <p>Test requests, sample collection, and results management</p>
