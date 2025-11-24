@@ -25,6 +25,8 @@ export default function Navbar() {
         <button onClick={() => navigate("/specialty")}>🏥 Specialty</button>
         <button onClick={() => navigate("/change-login-role")}>🔄 Change Role/Location</button>
         <button onClick={() => navigate("/role-master")}>👥 Role Master</button>
+        <button onClick={() => navigate("/organization-master")}>🏛️ Organization Master</button>
+        <button onClick={() => navigate("/location-master")}>📍 Location Master</button>
       </div>
 
       <button

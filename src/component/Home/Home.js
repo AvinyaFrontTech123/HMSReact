@@ -86,6 +86,20 @@ export default function Home() {
             <button className="module-btn" style={{ marginTop: "30px" }}>Access Module</button>
           </div>
 
+          <div className="module-card" onClick={()=> navigate('/organization-master')}>
+            <div className="module-icon">🏛️</div>
+            <h3>Organization Master</h3>
+            <p>Adds New Organizations according to its location</p>
+            <button className="module-btn">Access Module</button>
+          </div>
+
+          <div className="module-card" onClick={()=> navigate('/location-master')}>
+            <div className="module-icon">📍</div>
+            <h3>Location Master</h3>
+            <p>Adds New Location of an organization according to its location</p>
+            <button className="module-btn">Access Module</button>
+          </div>
+
         </div>
 
         <div className="quick-stats">

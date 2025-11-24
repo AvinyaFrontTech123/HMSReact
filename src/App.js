@@ -13,6 +13,8 @@ import Nursing from "./component/Nursing/Nursing";
 import Specialty from "./component/Specialty/Specialty";
 import ChangeLoginRole from "./component/Change_Role_Location/ChangeLoginRole";
 import RoleMaster from "./component/RoleMaster/RoleMaster";
+import OrganizationMaster from "./component/OrganizationMaster/OrganizationMaster";
+import LocationMaster from "./component/LocationMaster/LocationMaster";
 // Home dashboard
 import Home from "./component/Home/Home";
 
@@ -92,13 +94,31 @@ export default function App() {
 
         <Route
           path="/role-master"
-          element={
-            <PrivateRoute>
-              <RoleMaster />
-            </PrivateRoute>
-          }
+            element={
+              <PrivateRoute>
+                <RoleMaster />
+              </PrivateRoute>
+              }
         />
 
+         <Route
+          path="/organization-master"
+            element={
+              <PrivateRoute>
+                <OrganizationMaster />
+              </PrivateRoute>
+              }
+        />
+
+           <Route
+          path="/location-master"
+            element={
+              <PrivateRoute>
+                <LocationMaster/>
+              </PrivateRoute>
+              }
+        />
+        
       </Routes>
     </BrowserRouter>
   );

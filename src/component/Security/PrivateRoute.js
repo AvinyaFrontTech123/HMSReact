@@ -1,8 +1,25 @@
-import React from "react";
 import { Navigate } from "react-router-dom";
+import { useEffect, useState } from "react";
+import api from "../../api/axiosConfig"
 
 export default function PrivateRoute({ children }) {
-  const token = localStorage.getItem("token");
+  const [isValid, setIsValid] = useState(null);
 
-  return token ? children : <Navigate to="/login" />;
+  useEffect(() => {
+    const checkToken = async () => {
+      try {
+        await api.get("/auth/validate");  
+        setIsValid(true);
+      } catch (err) {
+        localStorage.removeItem("token");
+        setIsValid(false);
+      }
+    };
+
+    checkToken();
+  }, []);
+
+  if (isValid === null) return <div>Loading...</div>;
+
+  return isValid ? children : <Navigate to="/login" />;
 }
