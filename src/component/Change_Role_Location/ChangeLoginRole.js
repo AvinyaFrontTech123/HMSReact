@@ -3,14 +3,14 @@ import { FiUserCheck, FiHome, FiBriefcase, FiMapPin } from "react-icons/fi";
 import "../../styles/ChangeLoginRole.css";
 import Navbar from "../Navbar/Navbar";
 
-export default function ChangeLoginRole() {
+export default function ChangeLoginRole({ embedded }) {
   const [organization, setOrganization] = useState("");
   const [facility, setFacility] = useState("");
   const [role, setRole] = useState("");
 
   return (
     <div className="clr-page">
-      <Navbar />
+      {!embedded && <Navbar />}
 
       <div className="clr-wrapper">
         <div className="clr-card">

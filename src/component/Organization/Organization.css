@@ -1,0 +1,130 @@
+/* Simple styling for Organization module to match app look */
+.organization-module {
+  min-height: 60vh;
+  background: linear-gradient(90deg, #10b98122, #06b6d422);
+}
+
+.organization-header {
+  padding: 28px 40px;
+  color: #fff;
+  background: linear-gradient(90deg,#0ea678,#06b6d4);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+}
+
+.organization-header h1 {
+  margin: 0 0 6px 0;
+  font-size: 28px;
+}
+
+.organization-header p {
+  margin: 0;
+  opacity: 0.95;
+}
+
+.organization-lines {
+  display: flex;
+  gap: 0;
+  padding: 0;
+  background-color: #5194d6;
+  flex-wrap: wrap;
+  align-items: center;
+  border-bottom: none;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.org-line {
+  border: none;
+  padding: 18px 25px;
+  border-radius: 0;
+  cursor: pointer;
+  background-color: transparent;
+  color: white;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.3s;
+  border-bottom: 3px solid transparent;
+  white-space: nowrap;
+}
+
+.org-line.active {
+  background-color: rgba(255, 255, 255, 0.15);
+  color: #fff;
+  border-bottom-color: #3498db;
+  box-shadow: none;
+}
+
+/* Hover states */
+.org-line:hover {
+  background-color: rgba(90, 85, 85, 0.1);
+  transform: none;
+}
+
+.organization-content .org-panel {
+  margin-top: 18px;
+  background: transparent;
+}
+
+.organization-module .org-panel > * {
+  background: #fff;
+  padding: 18px;
+  border-radius: 8px;
+  box-shadow: 0 1px 6px rgba(2,6,23,0.06);
+}
+
+.organization-module .module-icon {
+  background: linear-gradient(90deg,#06b6d4,#10b981);
+  color: #fff;
+  width: 56px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  font-size: 22px;
+  margin-bottom: 12px;
+}
+
+
+.organization-content {
+  padding: 26px 40px 60px 40px;
+  background: #f8fafc;
+  transition: background 0.4s ease;
+}
+
+/* Panel-specific background colors */
+.organization-content.change-role-active {
+  background: linear-gradient(135deg, #667eea15, #764ba215);
+}
+
+.organization-content.role-master-active {
+  background: linear-gradient(135deg, #10b98115, #06b6d415);
+}
+
+.organization-content.organization-master-active {
+  background: linear-gradient(135deg, #f59e0b15, #f9731615);
+}
+
+.organization-content.location-master-active {
+  background: linear-gradient(135deg, #60a5fa15, #3b82f615);
+}
+
+.organization-content.user-group-active {
+  background: linear-gradient(135deg, #9f7aea15, #7c3aed15);
+}
+
+.organization-content.block-unblock-user-active {
+  background: linear-gradient(135deg, #ef444415, #dc262615);
+}
+
+.org-panel {
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 1px 6px rgba(16,24,40,0.06);
+}
+
+.org-panel h3 {
+  margin-top: 0;
+}

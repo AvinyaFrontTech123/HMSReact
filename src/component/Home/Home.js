@@ -72,31 +72,10 @@ export default function Home() {
             <button className="module-btn" disabled>Coming Soon</button>
           </div>
 
-          <div className="module-card" onClick={()=> navigate('/change-login-role')}>
-            <div className="module-icon">🔄</div>
-            <h3>Change Login Role / Location</h3>
-            <p>Changing the User Role or Location</p>
-            <button className="module-btn">Access Module</button>
-          </div>
-
-          <div className="module-card" onClick={()=> navigate('/role-master')}>
-            <div className="module-icon">👥</div>
-            <h3>Role Master</h3>
-            <p>Creating new roles</p>
-            <button className="module-btn" style={{ marginTop: "30px" }}>Access Module</button>
-          </div>
-
-          <div className="module-card" onClick={()=> navigate('/organization-master')}>
-            <div className="module-icon">🏛️</div>
-            <h3>Organization Master</h3>
-            <p>Adds New Organizations according to its location</p>
-            <button className="module-btn">Access Module</button>
-          </div>
-
-          <div className="module-card" onClick={()=> navigate('/location-master')}>
-            <div className="module-icon">📍</div>
-            <h3>Location Master</h3>
-            <p>Adds New Location of an organization according to its location</p>
+          <div className="module-card module-organization" onClick={() => navigate('/organization')}>
+            <div className="module-icon">🏢</div>
+            <h3>Organization</h3>
+            <p>Manage organization registration and Changes</p>
             <button className="module-btn">Access Module</button>
           </div>
 

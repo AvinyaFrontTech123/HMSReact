@@ -1,0 +1,50 @@
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0,0,0,0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.modal-box {
+  background: white;
+  width: 400px;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.modal-title {
+  font-size: 20px;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.modal-list {
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.modal-item {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+  cursor: pointer;
+}
+
+.modal-item:hover {
+  background: #f1f1f1;
+}
+
+.modal-close-btn {
+  margin-top: 15px;
+  padding: 8px 20px;
+  background: #1a73e8;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}

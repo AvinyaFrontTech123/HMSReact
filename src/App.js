@@ -15,6 +15,9 @@ import ChangeLoginRole from "./component/Change_Role_Location/ChangeLoginRole";
 import RoleMaster from "./component/RoleMaster/RoleMaster";
 import OrganizationMaster from "./component/OrganizationMaster/OrganizationMaster";
 import LocationMaster from "./component/LocationMaster/LocationMaster";
+import Organization from "./component/Organization/Organization";
+import UserGroupMaster from "./component/UserGroupMaster/UserGroupMaster";
+import BlockUnblockUser from "./component/BlockUnblockUser/BlockUnblockUser";
 // Home dashboard
 import Home from "./component/Home/Home";
 
@@ -110,14 +113,63 @@ export default function App() {
               }
         />
 
-           <Route
-          path="/location-master"
+        <Route
+          path="/organization"
+          element={
+            <PrivateRoute>
+              <Organization />
+            </PrivateRoute>
+          }
+        >
+          <Route
+            path="change-role"
             element={
               <PrivateRoute>
-                <LocationMaster/>
+                <ChangeLoginRole embedded={true} />
               </PrivateRoute>
-              }
-        />
+            }
+          />
+          <Route
+            path="role-master"
+            element={
+              <PrivateRoute>
+                <RoleMaster embedded={true} />
+              </PrivateRoute>
+            }
+          />
+          <Route
+            path="organization-master"
+            element={
+              <PrivateRoute>
+                <OrganizationMaster embedded={true} />
+              </PrivateRoute>
+            }
+          />
+          <Route
+            path="location-master"
+            element={
+              <PrivateRoute>
+                <LocationMaster embedded={true} />
+              </PrivateRoute>
+            }
+          />
+          <Route
+            path="user-group-master"
+            element={
+              <PrivateRoute>
+                <UserGroupMaster />
+              </PrivateRoute>
+            }
+          />
+          <Route
+            path="block-unblock-user"
+            element={
+              <PrivateRoute>
+                <BlockUnblockUser />
+              </PrivateRoute>
+            }
+          />
+        </Route>
         
       </Routes>
     </BrowserRouter>

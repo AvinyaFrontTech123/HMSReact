@@ -23,10 +23,8 @@ export default function Navbar() {
         <button onClick={() => navigate("/nursing")}>👩‍⚕️ Nursing</button>
         <button onClick={() => navigate("/laboratory")}>🔬 Laboratory</button>
         <button onClick={() => navigate("/specialty")}>🏥 Specialty</button>
-        <button onClick={() => navigate("/change-login-role")}>🔄 Change Role/Location</button>
-        <button onClick={() => navigate("/role-master")}>👥 Role Master</button>
-        <button onClick={() => navigate("/organization-master")}>🏛️ Organization Master</button>
-        <button onClick={() => navigate("/location-master")}>📍 Location Master</button>
+        {/* Module links moved under Organization module */}
+        <button onClick={() => navigate("/organization")}>🏢 Organization</button>
       </div>
 
       <button

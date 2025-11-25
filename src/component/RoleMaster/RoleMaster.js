@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "../../styles/RoleMaster.css";
 import Navbar from "../Navbar/Navbar";
 
-export default function RoleMaster() {
+export default function RoleMaster({ embedded }) {
   const [roleCode, setRoleCode] = useState("");
   const [roleDesc, setRoleDesc] = useState("");
 
@@ -42,7 +42,7 @@ export default function RoleMaster() {
 
   return (
     <div className="rm-page">
-      <Navbar />
+      {!embedded && <Navbar />}
 
       <div className="rm-wrapper">
         <div className="rm-card">

@@ -1,7 +1,7 @@
 /* Whole Page Background */
 .clr-page {
   min-height: 100vh;
-  background: #aecae0;
+  background: #f8fafc
 }
 
 /* Wrapper BELOW NAVBAR */
@@ -11,6 +11,7 @@
   justify-content: center;
   margin-top: 160px;     /* space below navbar */
   padding-bottom: 40px;
+  background-color: #f8fafc;
 }
 
 /* CARD */

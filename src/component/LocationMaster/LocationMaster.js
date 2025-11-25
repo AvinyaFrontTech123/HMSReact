@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "../../styles/LocationMaster.css";
 import Navbar from "../Navbar/Navbar";
 
-export default function LocationMasterForm() {
+export default function LocationMasterForm({ embedded }) {
   const initialState = {
     locationCode: "",
     locationMasterDescription: "",
@@ -43,7 +43,7 @@ export default function LocationMasterForm() {
 
   return (
     <>
-      <Navbar />
+      {!embedded && <Navbar />}
 
       <div className="loc-page">
         <div className="loc-card">

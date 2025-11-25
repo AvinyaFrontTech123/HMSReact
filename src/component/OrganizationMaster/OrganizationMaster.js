@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import api from "../../api/axiosConfig";
-import Navbar from "../Navbar/Navbar";
+
 import "../../styles/OrganizationMaster.css";
 
 export default function OrganizationMaster() {
@@ -118,7 +118,7 @@ export default function OrganizationMaster() {
 
   return (
     <>
-      <Navbar />
+    
 
       <div className="org-page">
         <div className="org-card">
