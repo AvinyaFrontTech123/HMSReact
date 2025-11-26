@@ -1,10 +1,13 @@
 /* PAGE CONTAINER */
 .ug-container {
-  padding: 35px;
+  padding: 32px;
   width: 95%;
-  margin: auto;
-  background: #f4f7fb;
-  min-height: 100vh;
+  max-width: 1200px;
+  margin: 28px auto;
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.06);
+  min-height: 70vh;
   font-family: Arial, sans-serif;
 }
 
@@ -19,7 +22,7 @@
 
 /* SECTION HEADER BAR */
 .section-header {
-  background: #555;
+  background: #383838;
   color: white;
   padding: 10px;
   font-size: 16px;
@@ -67,6 +70,13 @@ padding: 10px 15px;
 .ug-grid-3 {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+  margin-bottom: 20px;
+}
+
+.ug-grid-4 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
   gap: 22px;
   margin-bottom: 20px;
 }
@@ -197,4 +207,21 @@ padding: 10px 15px;
   .search-box {
     width: 100%;
   }
+}
+
+/* Fix: remove unexpected red underline / border under section headers */
+.section-header {
+  border-bottom: none !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+.section-header::before,
+.section-header::after {
+  display: none !important;
+}
+
+/* In case a following element has a top border applied globally, clear it here */
+.section-header + * {
+  border-top: none !important;
 }

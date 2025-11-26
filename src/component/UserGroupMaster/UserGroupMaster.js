@@ -14,14 +14,21 @@ export default function UserGroupMaster() {
   const [reason, setReason] = useState("");
 
   // -------------------------
-  // ROLE ASSIGNMENT TABLE
+  // ROLE ASSIGNMENT TABLE (sample data)
   // -------------------------
-  const [roleRows, setRoleRows] = useState([]);
+  const [roleRows, setRoleRows] = useState([
+    { id: 1, role: 'Administrator', organization: 'Apollo', facility: 'Chennai', activeFrom: '2025-01-01', status: true },
+    { id: 2, role: 'Doctor Access', organization: 'Global Hospitals', facility: 'Bangalore', activeFrom: '2024-12-15', status: true },
+    { id: 3, role: 'Pharmacy Role', organization: 'Fortis', facility: 'Hyderabad', activeFrom: '2023-08-10', status: false },
+  ]);
 
   // -------------------------
-  // ASSIGN USERS TABLE
+  // ASSIGN USERS TABLE (sample data)
   // -------------------------
-  const [userRows, setUserRows] = useState([]);
+  const [userRows, setUserRows] = useState([
+    { id: 1, userName: 'Rahul', empName: 'Rahul Kumar', empCode: 'EMP001', department: 'Cardiology', profileType: 'Doctor', status: true },
+    { id: 2, userName: 'Priya', empName: 'Priya Sharma', empCode: 'EMP002', department: 'Nursing', profileType: 'Nurse', status: true },
+  ]);
 
   // -------------------------
   // MODAL STATE
@@ -131,24 +138,21 @@ export default function UserGroupMaster() {
       {/* BLOCK UNBLOCK SECTION */}
       <div className="section-header">User Group Details</div>
 
-      <div className="ug-grid-3">
+      <div className="ug-grid-4">
         <div>
           <label className="ug-label">User Group Name *</label>
-          <input type="text" className="ug-input" />
+          <input type="text" className="ug-input" defaultValue="General Staff" />
         </div>
 
         <div>
-  <label className="ug-label">Current Status</label>
-
-  <div 
-    className="status-text"
-    style={{
-    color: status === "Active" ? "green" : "red"
-  }}
-  >
-    {status}
-  </div>
-</div>
+          <label className="ug-label">Current Status</label>
+          <div
+            className="status-text"
+            style={{ color: status === "Active" ? "green" : "red" }}
+          >
+            {status}
+          </div>
+        </div>
 
         <div>
           <label className="ug-label">New Status</label>
@@ -163,6 +167,11 @@ export default function UserGroupMaster() {
             <option>Block</option>
             <option>Unblock</option>
           </select>
+        </div>
+
+        <div>
+          <label className="ug-label">Emp Code</label>
+          <input type="text" className="ug-input" defaultValue="UG001" />
         </div>
       </div>
 
@@ -295,9 +304,30 @@ export default function UserGroupMaster() {
       </table>
 
       {/* FINAL BUTTONS */}
-      <div className="button-row">
-        <button className="save-btn">SAVE</button>
-        <button className="cancel-btn">CANCEL</button>
+      <div style={{ display: 'flex', justifyContent: 'center', gap: 16, marginTop: 30 }}>
+        <button
+          className="save-btn"
+          onClick={() => alert('User Group saved (sample)')}
+        >
+          SAVE
+        </button>
+        <button
+          className="cancel-btn"
+          onClick={() => {
+            // reset to sample state
+            setRoleRows([
+              { id: 1, role: 'Administrator', organization: 'Apollo', facility: 'Chennai', activeFrom: '2025-01-01', status: true },
+              { id: 2, role: 'Doctor Access', organization: 'Global Hospitals', facility: 'Bangalore', activeFrom: '2024-12-15', status: true },
+              { id: 3, role: 'Pharmacy Role', organization: 'Fortis', facility: 'Hyderabad', activeFrom: '2023-08-10', status: false },
+            ]);
+            setUserRows([
+              { id: 1, userName: 'Rahul', empName: 'Rahul Kumar', empCode: 'EMP001', department: 'Cardiology', profileType: 'Doctor', status: true },
+              { id: 2, userName: 'Priya', empName: 'Priya Sharma', empCode: 'EMP002', department: 'Nursing', profileType: 'Nurse', status: true },
+            ]);
+          }}
+        >
+          CLEAR
+        </button>
       </div>
 
       {/* ROLE MODAL */}

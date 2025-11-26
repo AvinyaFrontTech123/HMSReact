@@ -16,6 +16,8 @@ const Organization = () => {
     if (path.includes('location-master')) return 'location-master';
     if (path.includes('user-group-master')) return 'user-group-master';
     if (path.includes('block-unblock-user')) return 'block-unblock-user';
+    if (path.includes('user-master')) return 'user-master';
+    if (path.includes('employee-master')) return 'employee-master';
     return 'change-role'; // default
   };
 
@@ -71,6 +73,20 @@ const Organization = () => {
           onClick={() => navigate('/organization/block-unblock-user')}
         >
           🚫 Block/Unblock User
+        </button>
+
+        <button
+          className={`org-line user-master ${active === 'user-master' ? 'active' : ''}`}
+          onClick={() => navigate('/organization/user-master')}
+        >
+          👤 User Master
+        </button>
+
+        <button
+          className={`org-line employee-master ${active === 'employee-master' ? 'active' : ''}`}
+          onClick={() => navigate('/organization/employee-master')}
+        >
+          👨‍💼 Employee Master
         </button>
       </nav>
 

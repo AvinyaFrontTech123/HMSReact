@@ -1,7 +1,8 @@
 /* Simple styling for Organization module to match app look */
 .organization-module {
-  min-height: 60vh;
-  background: linear-gradient(90deg, #10b98122, #06b6d422);
+  min-height: 100vh;
+  /* Single unified background (same as LocationMaster) */
+  background: linear-gradient(135deg, #ff9a9e, #fad0c4, #fbc2eb, #a1c4fd, #c2e9fb);
 }
 
 .organization-header {
@@ -89,7 +90,8 @@
 
 .organization-content {
   padding: 26px 40px 60px 40px;
-  background: #f8fafc;
+  /* content transparent so unified gradient is visible */
+  background: transparent;
   transition: background 0.4s ease;
 }
 
@@ -118,11 +120,19 @@
   background: linear-gradient(135deg, #ef444415, #dc262615);
 }
 
+.organization-content.user-master-active {
+  background: linear-gradient(135deg, #ec4899 15, #f43f5e15);
+}
+
+.organization-content.employee-master-active {
+  background: linear-gradient(135deg, #0ea67815, #10b98115);
+}
+
 .org-panel {
-  background: #fff;
+  background: transparent;
   padding: 20px;
   border-radius: 8px;
-  box-shadow: 0 1px 6px rgba(16,24,40,0.06);
+  box-shadow: none;
 }
 
 .org-panel h3 {

@@ -18,6 +18,8 @@ import LocationMaster from "./component/LocationMaster/LocationMaster";
 import Organization from "./component/Organization/Organization";
 import UserGroupMaster from "./component/UserGroupMaster/UserGroupMaster";
 import BlockUnblockUser from "./component/BlockUnblockUser/BlockUnblockUser";
+import UserMaster from "./component/UserMaster/UserMaster";
+import EmployeeMaster from "./component/EmployeeMaster/EmployeeMaster";
 // Home dashboard
 import Home from "./component/Home/Home";
 
@@ -166,6 +168,22 @@ export default function App() {
             element={
               <PrivateRoute>
                 <BlockUnblockUser />
+              </PrivateRoute>
+            }
+          />
+          <Route
+            path="user-master"
+            element={
+              <PrivateRoute>
+                <UserMaster embedded={true} />
+              </PrivateRoute>
+            }
+          />
+          <Route
+            path="employee-master"
+            element={
+              <PrivateRoute>
+                <EmployeeMaster embedded={true} />
               </PrivateRoute>
             }
           />
